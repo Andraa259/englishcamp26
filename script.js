@@ -65,14 +65,20 @@ window.addEventListener('load', function() {
     const skeleton = document.getElementById('skeleton');
     const mainContent = document.getElementById('mainContent');
 
-    // Tunggu sedikit supaya user tidak melihat flash
+    if (!loader) return;
+
+    // Tunggu sedikit, lalu hilangkan loader
     setTimeout(() => {
         loader.style.opacity = '0';
+        loader.style.pointerEvents = 'none';
+        if (skeleton) skeleton.classList.add('hidden');
+        
         setTimeout(() => {
             loader.classList.add('hidden');
-            skeleton.classList.add('hidden');
-            mainContent.style.display = 'block';
-            mainContent.classList.add('fade-in');
+            if (mainContent) {
+                mainContent.style.display = 'block';
+                mainContent.classList.add('fade-in');
+            }
         }, 500);
-    }, 800);
+    }, 500);
 });
