@@ -9,10 +9,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>Loading...</p>
+    </div>
+    
+    <!-- Skeleton -->
+    <div id="skeleton" class="hidden">
+        <div class="skeleton-banner"></div>
+        <div class="skeleton-title"></div>
+        <div class="skeleton-text"></div>
+        <div class="skeleton-text short"></div>
+    </div>
     <div class="container">
         <!-- Header Banner with Title Overlay -->
         <header class="header-banner">
-            <img src="pic1.jpg"" alt="English Camp ELCC 2026 Group Photo">
+            <link rel="preload" as="image" href="pic1.jpg">
             <div class="header-title">
                 <h1>🌟 ENGLISH CAMP ELCC 2026 🌟</h1>
             <p class="subtitle">MONSTER — Moving Together Through English, Teamwork, and Excellence</p>
@@ -33,7 +46,7 @@
 
         <!-- Poster Section -->
         <section class="card poster-section">
-            <img src="pic2.png" alt="HOWL'S Poster">
+            <link rel="preload" as="image" href="pic2.png">
         </section>
 
         <!-- Gallery Section -->
@@ -41,19 +54,19 @@
             <h2 class="section-title">📸 Gallery</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="pic3.jpg" alt="English Camp Activity 1">
+                    <img src="pic3.jpg" loading="lazy" alt="English Camp Activity 1">
                     <div class="gallery-caption">Presentation Session</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="pic4.jpg" alt="English Camp Activity 2">
+                    <img src="pic4.jpg" loading="lazy" alt="English Camp Activity 2">
                     <div class="gallery-caption">School Visit & Teaching</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="pic5.jpg" alt="English Camp Activity 3">
+                    <img src="pic5.jpg" loading="lazy" alt="English Camp Activity 3">
                     <div class="gallery-caption">Campfire Night</div>
                 </div>
                 <div class="gallery-item">
-                    <img src="pic6.jpg" alt="English Camp Activity 4">
+                    <img src="pic6.jpg" loading="lazy" alt="English Camp Activity 4">
                     <div class="gallery-caption">Games Session</div>
                 </div>
             </div>
