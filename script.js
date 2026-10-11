@@ -58,3 +58,21 @@ function scrollToTopAnimated(btn) {
 
     requestAnimationFrame(scrollStep);
 }
+
+// Loading screen & skeleton
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    const skeleton = document.getElementById('skeleton');
+    const mainContent = document.getElementById('mainContent');
+
+    // Tunggu sedikit supaya user tidak melihat flash
+    setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.classList.add('hidden');
+            skeleton.classList.add('hidden');
+            mainContent.style.display = 'block';
+            mainContent.classList.add('fade-in');
+        }, 500);
+    }, 800);
+});
